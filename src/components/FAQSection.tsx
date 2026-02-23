@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const faqs = [
   {
@@ -31,25 +32,28 @@ const faqs = [
 const FAQSection = () => (
   <section className="bg-light-grey py-20 px-4">
     <div className="container mx-auto max-w-3xl">
-      <h2 className="text-3xl md:text-4xl text-primary text-center mb-4">
-        Your Questions, Answered.
-      </h2>
-      <div className="w-16 h-px bg-gold mx-auto mb-10" />
+      <ScrollReveal variant="fade-up">
+        <h2 className="text-3xl md:text-4xl text-primary text-center mb-4">
+          Your Questions, Answered.
+        </h2>
+        <div className="w-16 h-px bg-gold mx-auto mb-10" />
+      </ScrollReveal>
 
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((faq, i) => (
-          <AccordionItem
-            key={i}
-            value={`faq-${i}`}
-            className="bg-background rounded shadow-sm border-none px-6"
-          >
-            <AccordionTrigger className="text-primary font-heading text-base font-semibold hover:no-underline py-5">
-              {faq.question}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
-              {faq.answer}
-            </AccordionContent>
-          </AccordionItem>
+          <ScrollReveal key={i} variant="fade-up" delay={i * 100}>
+            <AccordionItem
+              value={`faq-${i}`}
+              className="bg-background rounded shadow-sm border-none px-6"
+            >
+              <AccordionTrigger className="text-primary font-heading text-base font-semibold hover:no-underline py-5">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          </ScrollReveal>
         ))}
       </Accordion>
     </div>

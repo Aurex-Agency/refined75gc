@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const testimonials = [
   {
@@ -21,29 +22,30 @@ const testimonials = [
 const TestimonialsSection = () => (
   <section className="bg-light-grey py-20 px-4">
     <div className="container mx-auto">
-      <h2 className="text-3xl md:text-4xl text-primary text-center mb-4">
-        What Our Patients Are Saying...
-      </h2>
-      <div className="w-16 h-px bg-gold mx-auto mb-14" />
+      <ScrollReveal variant="fade-up">
+        <h2 className="text-3xl md:text-4xl text-primary text-center mb-4">
+          What Our Patients Are Saying...
+        </h2>
+        <div className="w-16 h-px bg-gold mx-auto mb-14" />
+      </ScrollReveal>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {testimonials.map((t) => (
-          <div
-            key={t.author}
-            className="bg-background rounded shadow-sm p-8 flex flex-col"
-          >
-            <div className="flex gap-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-              ))}
+        {testimonials.map((t, i) => (
+          <ScrollReveal key={t.author} variant="scale-in" delay={i * 150}>
+            <div className="bg-background rounded shadow-sm p-8 flex flex-col h-full">
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} className="w-4 h-4 fill-gold text-gold" />
+                ))}
+              </div>
+              <blockquote className="text-muted-foreground text-sm leading-relaxed flex-1 italic">
+                "{t.quote}"
+              </blockquote>
+              <p className="mt-6 font-heading text-primary font-semibold text-sm">
+                — {t.author}
+              </p>
             </div>
-            <blockquote className="text-muted-foreground text-sm leading-relaxed flex-1 italic">
-              "{t.quote}"
-            </blockquote>
-            <p className="mt-6 font-heading text-primary font-semibold text-sm">
-              — {t.author}
-            </p>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
     </div>
