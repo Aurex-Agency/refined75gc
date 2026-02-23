@@ -4,15 +4,15 @@ import teamImage from "@/assets/injection-team.webp";
 const credentials = [
   {
     icon: Award,
-    title: "A True Master",
+    title: "Industry Leaders & Educators",
     description:
-      "Founded by Sarah Safa, a national instructor who has trained over 6,000 medical providers.",
+      "Our team spends years mastering advanced aesthetic procedures and intricate facial anatomy. We are respected leaders in the industry who train, consult, and mentor other providers — all so you receive outstanding care.",
   },
   {
     icon: Clock,
-    title: "Unmatched Experience",
+    title: "Decades of Combined Experience",
     description:
-      "With over 20 years in plastic and reconstructive surgery, Sarah's knowledge of facial anatomy is second to none.",
+      "Founded by Sarah Safa, MS, PAC — a national instructor with over 20 years in plastic and reconstructive surgery. Her extensive knowledge of facial anatomy and expertise in restoring harmony, symmetry, and balance is unmatched.",
   },
   {
     icon: Heart,
