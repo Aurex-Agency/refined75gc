@@ -6,7 +6,7 @@ const StickyNav = () => {
 
   useEffect(() => {
     const handleScroll = () => setIsSticky(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -15,11 +15,14 @@ const StickyNav = () => {
   };
 
   return (
-    <nav
-      className={`bg-background py-4 px-4 transition-shadow duration-300 z-50 ${
-        isSticky ? "fixed top-0 left-0 right-0 shadow-md" : "relative"
-      }`}
-    >
+    <>
+      {/* Spacer to prevent content jump */}
+      <div className="h-[72px] md:h-[80px]" />
+      <nav
+        className={`fixed top-0 left-0 right-0 bg-background py-4 px-4 transition-shadow duration-300 z-50 ${
+          isSticky ? "shadow-md" : ""
+        }`}
+      >
       <div className="container mx-auto flex items-center justify-between">
         <img src={raLogoNav} alt="Refined Aesthetics" className="h-12 md:h-14 w-auto" />
         <button
@@ -29,7 +32,8 @@ const StickyNav = () => {
           Claim Your $75 Gift Certificate
         </button>
       </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
