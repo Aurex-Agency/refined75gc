@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock } from "lucide-react";
+import raLogoTagline from "@/assets/ra-logo-tagline.jpg";
 
 const Footer = () => (
   <footer className="bg-primary py-14 px-4">
@@ -6,9 +7,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-3 gap-10 text-primary-foreground/80 text-sm">
         {/* Brand */}
         <div>
-          <p className="font-heading text-xl text-primary-foreground font-semibold mb-4">
-            Refined <span className="text-gold italic">Aesthetics</span>
-          </p>
+          <img src={raLogoTagline} alt="Refined Aesthetics - Experience beautiful." className="h-24 w-auto mb-4 brightness-0 invert" />
           <p className="leading-relaxed">
             A more thoughtful approach to medical aesthetics in Leesburg, Virginia.
           </p>
