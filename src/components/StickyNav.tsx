@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import raIcon from "@/assets/ra-icon.jpg";
+import raLogoNav from "@/assets/ra-logo-nav.jpg";
 
 const StickyNav = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -21,7 +21,7 @@ const StickyNav = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between">
-        <img src={raIcon} alt="Refined Aesthetics" className="h-10 md:h-12 w-auto" />
+        <img src={raLogoNav} alt="Refined Aesthetics" className="h-12 md:h-14 w-auto" />
         <button
           onClick={scrollToForm}
           className="bg-gold hover:bg-gold-hover text-accent-foreground font-semibold text-sm md:text-base px-5 py-2.5 rounded transition-colors tracking-wide"
