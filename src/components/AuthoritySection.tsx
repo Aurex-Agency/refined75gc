@@ -1,5 +1,5 @@
 import { Award, Clock, Heart } from "lucide-react";
-import founderImage from "@/assets/founder-portrait.jpg";
+import teamImage from "@/assets/injection-team.webp";
 
 const credentials = [
   {
@@ -35,16 +35,16 @@ const AuthoritySection = () => (
         <div className="flex justify-center">
           <div className="relative">
             <img
-              src={founderImage}
-              alt="Sarah Safa, MS, PAC - Founder of Refined Aesthetics"
+              src={teamImage}
+              alt="Our professional injection team at Refined Aesthetics"
               className="rounded shadow-xl w-full max-w-sm object-cover"
               loading="lazy"
             />
             <div className="mt-4 text-center">
               <p className="font-heading text-lg text-primary font-semibold">
-                Sarah Safa, MS, PAC
+                Our Professional Injection Team
               </p>
-              <p className="text-muted-foreground text-sm">Founder &amp; Lead Injector</p>
+              <p className="text-muted-foreground text-sm">Expert Care, Beautiful Results</p>
             </div>
           </div>
         </div>
