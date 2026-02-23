@@ -17,10 +17,17 @@ const HeroSection = () => {
       <div className="relative h-[300px] lg:h-auto overflow-hidden">
         <img
           src={heroImage}
-          alt="Refined Aesthetics luxury medspa interior"
+          alt="Refined Aesthetics comfortable and private suite"
           className="w-full h-full object-cover"
           loading="eager"
         />
+        {/* Overlay graphic */}
+        <div className="absolute bottom-6 left-6 right-6 bg-primary/85 backdrop-blur-sm rounded-lg px-6 py-4 border border-gold/30">
+          <p className="text-primary-foreground font-heading text-lg md:text-xl text-center tracking-wide">
+            ✦ <span className="text-gold italic">Comfortable</span> and{" "}
+            <span className="text-gold italic">Private</span> Suites! ✦
+          </p>
+        </div>
       </div>
 
       {/* Right Column - Form */}
