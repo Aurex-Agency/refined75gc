@@ -125,9 +125,9 @@
   position: absolute;
   inset: 0;
   background-image: url('/images/ra-pattern.png');
-  background-size: 120px 120px;
+  background-size: 140px 140px;
   background-repeat: repeat;
-  opacity: 0.04;
+  opacity: 0.08;
   pointer-events: none;
-  mix-blend-mode: soft-light;
+  filter: brightness(0) invert(1);
 }
