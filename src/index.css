@@ -123,11 +123,12 @@
 .brand-pattern::after {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -50%;
   background-image: url('/images/ra-pattern.png');
-  background-size: 140px 140px;
+  background-size: 180px 180px;
   background-repeat: repeat;
-  opacity: 0.08;
+  opacity: 0.05;
   pointer-events: none;
   filter: brightness(0) invert(1);
+  transform: rotate(30deg);
 }
