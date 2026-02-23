@@ -1,7 +1,7 @@
 import { Phone, Instagram, Facebook } from "lucide-react";
 
 const TopBar = () => (
-  <div className="bg-primary py-2 px-4">
+  <div className="bg-primary brand-pattern py-2 px-4 overflow-hidden">
     <div className="container mx-auto flex items-center justify-between text-sm">
       <a
         href="tel:7037945689"

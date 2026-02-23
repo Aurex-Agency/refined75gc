@@ -2,7 +2,7 @@ import { Phone, MapPin, Clock } from "lucide-react";
 import raIcon from "@/assets/ra-icon-transparent.png";
 
 const Footer = () => (
-  <footer className="bg-primary py-14 px-4">
+  <footer className="bg-primary brand-pattern py-14 px-4 overflow-hidden">
     <div className="container mx-auto">
       <div className="grid md:grid-cols-3 gap-10 text-primary-foreground/80 text-sm">
         {/* Brand */}
