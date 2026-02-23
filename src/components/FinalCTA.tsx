@@ -6,7 +6,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="bg-primary py-20 px-4">
+    <section className="bg-primary brand-pattern py-20 px-4 overflow-hidden">
       <div className="container mx-auto max-w-2xl text-center">
         <ScrollReveal variant="fade-up">
           <h2 className="text-3xl md:text-4xl text-primary-foreground mb-4">

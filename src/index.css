@@ -115,3 +115,19 @@
     background-color: hsl(var(--warm-white));
   }
 }
+
+/* Faint repeating brand pattern for blue backgrounds */
+.brand-pattern {
+  position: relative;
+}
+.brand-pattern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/ra-pattern.png');
+  background-size: 120px 120px;
+  background-repeat: repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
