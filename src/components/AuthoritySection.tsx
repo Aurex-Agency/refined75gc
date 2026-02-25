@@ -1,5 +1,5 @@
 import { Award, Clock, Heart } from "lucide-react";
-import teamImage from "@/assets/injection-team.webp";
+import teamImage from "@/assets/injection-team.jpg";
 import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const credentials = [
