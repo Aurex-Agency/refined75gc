@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import heroImage from "@/assets/hero-image.jpg";
 import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const HeroSection = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you! Your $75 Gift Certificate has been claimed. We'll be in touch shortly.");
-    setFormData({ name: "", email: "", phone: "" });
-  };
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://link.alphacrm.io/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <section id="claim-form" className="grid lg:grid-cols-2 min-h-[600px]">
@@ -31,7 +33,7 @@ const HeroSection = () => {
         </ScrollReveal>
       </div>
 
-      {/* Right Column - Form */}
+      {/* Right Column - GHL Form */}
       <div className="bg-primary brand-pattern p-8 md:p-12 lg:p-16 flex flex-col justify-center overflow-hidden">
         <ScrollReveal variant="fade-up" delay={200}>
           <h1 className="text-3xl md:text-4xl lg:text-[2.6rem] leading-tight text-primary-foreground mb-6">
@@ -48,45 +50,23 @@ const HeroSection = () => {
         </ScrollReveal>
 
         <ScrollReveal variant="fade-up" delay={500}>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name *"
-              required
-              maxLength={100}
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-3 rounded bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 font-body text-sm focus:outline-none focus:ring-2 focus:ring-gold"
-            />
-            <input
-              type="email"
-              placeholder="Email Address *"
-              required
-              maxLength={255}
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 rounded bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 font-body text-sm focus:outline-none focus:ring-2 focus:ring-gold"
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number *"
-              required
-              maxLength={20}
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full px-4 py-3 rounded bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 font-body text-sm focus:outline-none focus:ring-2 focus:ring-gold"
-            />
-            <button
-              type="submit"
-              className="w-full bg-gold hover:bg-gold-hover text-accent-foreground font-semibold py-3.5 rounded transition-colors text-base tracking-wide"
-            >
-              Claim My $75 Certificate Now
-            </button>
-            <p className="text-primary-foreground/50 text-xs leading-relaxed">
-              By submitting, you agree to receive promotional communications. Your
-              first visit is required to redeem your gift certificate.
-            </p>
-          </form>
+          <iframe
+            src="https://link.alphacrm.io/widget/form/uH6PlwY1z91nfhmaCfjN"
+            style={{ width: "100%", height: "490px", border: "none", borderRadius: "3px" }}
+            id="inline-uH6PlwY1z91nfhmaCfjN"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="$75 OFF New LP Form"
+            data-height="490"
+            data-layout-iframe-id="inline-uH6PlwY1z91nfhmaCfjN"
+            data-form-id="uH6PlwY1z91nfhmaCfjN"
+            title="$75 OFF New LP Form"
+          />
         </ScrollReveal>
       </div>
     </section>
