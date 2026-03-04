@@ -52,8 +52,8 @@ const HeroSection = () => {
         <ScrollReveal variant="fade-up" delay={500}>
           <iframe
             src="https://link.alphacrm.io/widget/form/uH6PlwY1z91nfhmaCfjN"
-            style={{ width: "100%", height: "100%", minHeight: "490px", border: "none", borderRadius: "3px" }}
-            className="!h-[600px] md:!h-[490px]"
+            style={{ width: "100%", border: "none", borderRadius: "3px" }}
+            className="h-[700px] md:h-[490px]"
             id="inline-uH6PlwY1z91nfhmaCfjN"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
