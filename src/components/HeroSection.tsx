@@ -34,7 +34,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Column - GHL Form */}
-      <div className="bg-primary brand-pattern p-8 md:p-12 lg:p-16 flex flex-col justify-center overflow-hidden">
+      <div className="bg-primary brand-pattern p-4 md:p-12 lg:p-16 flex flex-col justify-center overflow-hidden">
         <ScrollReveal variant="fade-up" delay={200}>
           <h1 className="text-3xl md:text-4xl lg:text-[2.6rem] leading-tight text-primary-foreground mb-6">
             Botox Isn't the Decision Anymore. Choosing the Right Provider Is.
@@ -52,7 +52,8 @@ const HeroSection = () => {
         <ScrollReveal variant="fade-up" delay={500}>
           <iframe
             src="https://link.alphacrm.io/widget/form/uH6PlwY1z91nfhmaCfjN"
-            style={{ width: "100%", height: "490px", border: "none", borderRadius: "3px" }}
+            style={{ width: "100%", height: "100%", minHeight: "490px", border: "none", borderRadius: "3px" }}
+            className="!h-[600px] md:!h-[490px]"
             id="inline-uH6PlwY1z91nfhmaCfjN"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
