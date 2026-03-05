@@ -1,5 +1,5 @@
 import { Award, Clock, Heart } from "lucide-react";
-import teamImage from "@/assets/injection-team.jpg";
+import teamImage from "@/assets/injection-team.webp";
 import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const credentials = [
@@ -42,6 +42,9 @@ const AuthoritySection = () => (
                 alt="Our professional injection team at Refined Aesthetics"
                 className="rounded shadow-xl w-full max-w-sm object-cover"
                 loading="lazy"
+                decoding="async"
+                width={400}
+                height={500}
               />
               <div className="mt-4 text-center">
                 <p className="font-heading text-lg text-primary font-semibold">

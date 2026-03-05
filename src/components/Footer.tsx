@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-3 gap-10 text-primary-foreground/80 text-sm">
         {/* Brand */}
         <div>
-          <img src={raIcon} alt="Refined Aesthetics" className="h-20 w-auto mb-4 drop-shadow-[0_2px_16px_rgba(201,169,110,0.5)]" />
+          <img src={raIcon} alt="Refined Aesthetics" className="h-20 w-auto mb-4 drop-shadow-[0_2px_16px_rgba(201,169,110,0.5)]" loading="lazy" decoding="async" width={80} height={80} />
           <p className="leading-relaxed">
             A more thoughtful approach to medical aesthetics in Leesburg, Virginia.
           </p>

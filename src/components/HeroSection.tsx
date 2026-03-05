@@ -4,13 +4,18 @@ import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const HeroSection = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://link.alphacrm.io/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
+    // Defer GHL script to after page is interactive
+    const loadScript = () => {
+      const script = document.createElement("script");
+      script.src = "https://link.alphacrm.io/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
     };
+    if ("requestIdleCallback" in window) {
+      (window as any).requestIdleCallback(loadScript);
+    } else {
+      setTimeout(loadScript, 2000);
+    }
   }, []);
 
   return (
@@ -22,6 +27,10 @@ const HeroSection = () => {
           alt="Refined Aesthetics comfortable and private suite"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchPriority="high"
+          width={800}
+          height={600}
+          decoding="async"
         />
         <ScrollReveal variant="fade-up" delay={600}>
           <div className="absolute bottom-6 left-6 right-6 bg-primary/85 backdrop-blur-sm rounded-lg px-6 py-4 border border-gold/30">
