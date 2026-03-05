@@ -132,3 +132,8 @@
   filter: brightness(0) invert(1);
   transform: rotate(10deg);
 }
+
+/* Prevent site styles from overriding GHL embedded form colors */
+iframe[data-form-id] {
+  color-scheme: normal;
+}
