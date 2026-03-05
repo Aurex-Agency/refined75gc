@@ -22,6 +22,10 @@ const HeroSection = () => {
           alt="Refined Aesthetics comfortable and private suite"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchPriority="high"
+          width={800}
+          height={600}
+          decoding="async"
         />
         <ScrollReveal variant="fade-up" delay={600}>
           <div className="absolute bottom-6 left-6 right-6 bg-primary/85 backdrop-blur-sm rounded-lg px-6 py-4 border border-gold/30">
