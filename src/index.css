@@ -127,14 +127,14 @@
 .brand-pattern::after {
   content: '';
   position: absolute;
-  inset: -50%;
+  inset: 0;
   background-image: url('/images/ra-pattern.png');
   background-size: 180px 180px;
   background-repeat: repeat;
   opacity: 0.05;
   pointer-events: none;
   filter: brightness(0) invert(1);
-  transform: rotate(10deg);
+  will-change: auto;
 }
 
 /* Prevent site styles from overriding GHL embedded form colors */

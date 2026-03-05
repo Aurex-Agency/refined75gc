@@ -4,13 +4,18 @@ import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const HeroSection = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://link.alphacrm.io/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
+    // Defer GHL script to after page is interactive
+    const loadScript = () => {
+      const script = document.createElement("script");
+      script.src = "https://link.alphacrm.io/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
     };
+    if ("requestIdleCallback" in window) {
+      (window as any).requestIdleCallback(loadScript);
+    } else {
+      setTimeout(loadScript, 2000);
+    }
   }, []);
 
   return (
