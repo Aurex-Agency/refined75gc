@@ -34,7 +34,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Column - GHL Form */}
-      <div className="bg-primary brand-pattern p-4 md:p-12 lg:p-16 flex flex-col justify-center">
+      <div className="bg-primary brand-pattern overflow-hidden p-4 md:p-12 lg:p-16 flex flex-col justify-center">
         <ScrollReveal variant="fade-up" delay={200}>
           <h1 className="text-2xl md:text-4xl lg:text-[2.6rem] leading-tight text-primary-foreground mb-4 md:mb-6">
             Botox Isn't the Decision Anymore. Choosing the Right Provider Is.
