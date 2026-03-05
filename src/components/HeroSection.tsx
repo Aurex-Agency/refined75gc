@@ -59,24 +59,27 @@ const HeroSection = () => {
         </ScrollReveal>
 
         <ScrollReveal variant="fade-up" delay={500}>
-          <iframe
-            src="https://link.alphacrm.io/widget/form/uH6PlwY1z91nfhmaCfjN"
-            style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
-            className="min-h-[700px] md:min-h-[600px]"
-            id="inline-uH6PlwY1z91nfhmaCfjN"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="$75 OFF New LP 75gc"
-            data-height="600"
-            data-layout-iframe-id="inline-uH6PlwY1z91nfhmaCfjN"
-            data-form-id="uH6PlwY1z91nfhmaCfjN"
-            title="$75 OFF New LP 75gc"
-          />
+          <div className="min-h-[600px]">
+            <iframe
+              src="https://link.alphacrm.io/widget/form/uH6PlwY1z91nfhmaCfjN"
+              style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
+              className="min-h-[700px] md:min-h-[600px]"
+              id="inline-uH6PlwY1z91nfhmaCfjN"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="$75 OFF New LP 75gc"
+              data-height="600"
+              data-layout-iframe-id="inline-uH6PlwY1z91nfhmaCfjN"
+              data-form-id="uH6PlwY1z91nfhmaCfjN"
+              title="$75 OFF New LP 75gc"
+              loading="lazy"
+            />
+          </div>
         </ScrollReveal>
       </div>
     </section>

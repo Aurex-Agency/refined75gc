@@ -24,7 +24,14 @@ const StickyNav = () => {
         }`}
       >
       <div className="container mx-auto flex items-center justify-between">
-        <img src={raLogoNav} alt="Refined Aesthetics" className="h-12 md:h-14 w-auto" />
+        <img
+          src={raLogoNav}
+          alt="Refined Aesthetics"
+          className="h-12 md:h-14 w-auto"
+          width={130}
+          height={56}
+          decoding="async"
+        />
         <button
           onClick={scrollToForm}
           className="bg-gold hover:bg-gold-hover text-accent-foreground font-semibold text-xs md:text-base px-3 md:px-5 py-2 md:py-2.5 rounded transition-colors tracking-wide whitespace-nowrap"
