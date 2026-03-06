@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import raLogoNav from "@/assets/ra-logo-nav.jpg";
+import raLogoNav from "@/assets/ra-logo-nav.webp";
 
 const StickyNav = () => {
   const [isSticky, setIsSticky] = useState(false);
