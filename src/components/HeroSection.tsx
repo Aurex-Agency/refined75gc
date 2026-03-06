@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage400 from "@/assets/hero-image-400w.webp";
+import heroImage800 from "@/assets/hero-image-800w.webp";
+import heroImage1200 from "@/assets/hero-image-1200w.webp";
 import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const HeroSection = () => {
