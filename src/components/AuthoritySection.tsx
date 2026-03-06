@@ -43,8 +43,8 @@ const AuthoritySection = () => (
                 className="rounded shadow-xl w-full max-w-sm object-cover"
                 loading="lazy"
                 decoding="async"
-                width={400}
-                height={500}
+                width={560}
+                height={373}
               />
               <div className="mt-4 text-center">
                 <p className="font-heading text-lg text-primary font-semibold">
