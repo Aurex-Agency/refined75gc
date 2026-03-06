@@ -1,5 +1,4 @@
 import { Phone, MapPin, Clock } from "lucide-react";
-import raIcon from "@/assets/ra-icon-transparent.png";
 
 const Footer = () => (
   <footer className="bg-primary py-14 px-4 overflow-hidden">
@@ -8,13 +7,13 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <img
-            src={raIcon}
+            src="/assets/ra-icon-transparent.webp"
             alt="Refined Aesthetics"
             className="h-20 w-auto mb-4 drop-shadow-[0_2px_16px_rgba(201,169,110,0.5)]"
             loading="lazy"
             decoding="async"
-            width={80}
-            height={80}
+            width={280}
+            height={280}
           />
           <p className="leading-relaxed">
             A more thoughtful approach to medical aesthetics in Leesburg, Virginia.

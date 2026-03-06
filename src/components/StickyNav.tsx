@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import raLogoNav from "@/assets/ra-logo-nav.webp";
 
 const StickyNav = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -16,7 +15,6 @@ const StickyNav = () => {
 
   return (
     <>
-      {/* Spacer to prevent content jump */}
       <div className="h-[72px] md:h-[80px]" />
       <nav
         className={`fixed top-0 left-0 right-0 bg-background py-4 px-4 transition-shadow duration-300 z-50 border-b border-border ${
@@ -25,12 +23,13 @@ const StickyNav = () => {
       >
       <div className="container mx-auto flex items-center justify-between">
         <img
-          src={raLogoNav}
+          src="/assets/ra-logo-nav.webp"
           alt="Refined Aesthetics"
           className="h-12 md:h-14 w-auto"
           width={260}
           height={168}
           decoding="async"
+          loading="eager"
         />
         <button
           onClick={scrollToForm}

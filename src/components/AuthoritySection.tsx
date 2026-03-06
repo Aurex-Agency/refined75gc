@@ -1,5 +1,4 @@
 import { Award, Clock, Heart } from "lucide-react";
-import teamImage from "@/assets/injection-team.webp";
 import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const credentials = [
@@ -38,7 +37,7 @@ const AuthoritySection = () => (
           <div className="flex justify-center">
             <div className="relative">
               <img
-                src={teamImage}
+                src="/assets/injection-team.webp"
                 alt="Our professional injection team at Refined Aesthetics"
                 className="rounded shadow-xl w-full max-w-sm object-cover"
                 loading="lazy"
