@@ -24,16 +24,23 @@ const HeroSection = () => {
     <section id="claim-form" className="grid lg:grid-cols-2 min-h-[600px]">
       {/* Left Column - Image */}
       <div className="relative h-[300px] lg:h-auto overflow-hidden">
-        <img
-          src={heroImage}
-          alt="Refined Aesthetics comfortable and private suite"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchPriority="high"
-          width={800}
-          height={600}
-          decoding="async"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet={`${heroImage400} 400w, ${heroImage800} 800w, ${heroImage1200} 1200w`}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <img
+            src={heroImage800}
+            alt="Refined Aesthetics comfortable and private suite"
+            className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            width={800}
+            height={544}
+            decoding="async"
+          />
+        </picture>
         <ScrollReveal variant="fade-up" delay={600}>
           <div className="absolute bottom-6 left-6 right-6 bg-primary/85 backdrop-blur-sm rounded-lg px-6 py-4 border border-gold/30">
             <p className="text-primary-foreground font-heading text-lg md:text-xl text-center tracking-wide">

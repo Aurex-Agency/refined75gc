@@ -128,7 +128,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/images/ra-pattern.png');
+  background-image: url('/images/ra-pattern.webp');
   background-size: 180px 180px;
   background-repeat: repeat;
   opacity: 0.05;

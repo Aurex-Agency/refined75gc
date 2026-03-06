@@ -28,8 +28,8 @@ const StickyNav = () => {
           src={raLogoNav}
           alt="Refined Aesthetics"
           className="h-12 md:h-14 w-auto"
-          width={130}
-          height={56}
+          width={260}
+          height={168}
           decoding="async"
         />
         <button
