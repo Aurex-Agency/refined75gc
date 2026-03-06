@@ -1,12 +1,8 @@
 import { useEffect } from "react";
-import heroImage400 from "@/assets/hero-image-400w.webp";
-import heroImage800 from "@/assets/hero-image-800w.webp";
-import heroImage1200 from "@/assets/hero-image-1200w.webp";
 import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const HeroSection = () => {
   useEffect(() => {
-    // Defer GHL script to after page is interactive
     const loadScript = () => {
       const script = document.createElement("script");
       script.src = "https://link.alphacrm.io/js/form_embed.js";
@@ -27,11 +23,11 @@ const HeroSection = () => {
         <picture>
           <source
             type="image/webp"
-            srcSet={`${heroImage400} 400w, ${heroImage800} 800w, ${heroImage1200} 1200w`}
-            sizes="(max-width: 768px) 100vw, 50vw"
+            srcSet="/assets/hero-image-400w.webp 400w, /assets/hero-image-800w.webp 800w, /assets/hero-image-1200w.webp 1200w"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
           />
           <img
-            src={heroImage800}
+            src="/assets/hero-image-800w.webp"
             alt="Refined Aesthetics comfortable and private suite"
             className="w-full h-full object-cover"
             loading="eager"

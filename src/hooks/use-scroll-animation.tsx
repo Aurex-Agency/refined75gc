@@ -23,7 +23,11 @@ export const useScrollAnimation = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setIsVisible(true), delay);
+          if (delay > 0) {
+            setTimeout(() => setIsVisible(true), delay);
+          } else {
+            setIsVisible(true);
+          }
           observer.unobserve(el);
         }
       },
@@ -34,34 +38,14 @@ export const useScrollAnimation = ({
     return () => observer.disconnect();
   }, [threshold, delay]);
 
-  const baseStyles: React.CSSProperties = {
-    transition: "opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-  };
-
-  const hiddenStyles: Record<AnimationVariant, React.CSSProperties> = {
-    "fade-up": { opacity: 0, transform: "translateY(40px)" },
-    "fade-in": { opacity: 0 },
-    "fade-left": { opacity: 0, transform: "translateX(-40px)" },
-    "fade-right": { opacity: 0, transform: "translateX(40px)" },
-    "scale-in": { opacity: 0, transform: "scale(0.95)" },
-  };
-
-  const visibleStyles: React.CSSProperties = {
-    opacity: 1,
-    transform: "translateY(0) translateX(0) scale(1)",
-  };
-
   return {
     ref,
-    style: {
-      ...baseStyles,
-      ...(isVisible ? visibleStyles : hiddenStyles[variant]),
-    },
+    className: `scroll-reveal scroll-reveal--${variant}${isVisible ? " scroll-reveal--visible" : ""}`,
   };
 };
 
 /**
- * Wrapper component for scroll animations
+ * Wrapper component for scroll animations — uses CSS class toggle for composited animations
  */
 export const ScrollReveal = ({
   children,
@@ -76,10 +60,10 @@ export const ScrollReveal = ({
   threshold?: number;
   className?: string;
 }) => {
-  const { ref, style } = useScrollAnimation({ variant, delay, threshold });
+  const anim = useScrollAnimation({ variant, delay, threshold });
 
   return (
-    <div ref={ref} style={style} className={className}>
+    <div ref={anim.ref} className={`${anim.className} ${className}`}>
       {children}
     </div>
   );
