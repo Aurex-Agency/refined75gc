@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <footer className="bg-primary py-14 px-4 overflow-hidden">
