@@ -5,7 +5,7 @@ const HeroSection = () => {
   useEffect(() => {
     const loadScript = () => {
       const script = document.createElement("script");
-      script.src = "https://link.alphacrm.io/js/form_embed.js";
+      script.src = "https://site.refinedaestheticsmedspa.com/js/form_embed.js";
       script.async = true;
       document.body.appendChild(script);
     };
