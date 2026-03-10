@@ -44,12 +44,12 @@ const Footer = () => (
 
         {/* Legal */}
         <div className="space-y-2">
-          <a href="#" className="block hover:text-gold transition-colors">
+          <Link to="/privacy-policy" className="block hover:text-gold transition-colors">
             Privacy Policy
-          </a>
-          <a href="#" className="block hover:text-gold transition-colors">
+          </Link>
+          <Link to="/terms-of-service" className="block hover:text-gold transition-colors">
             Terms of Service
-          </a>
+          </Link>
         </div>
       </div>
 
