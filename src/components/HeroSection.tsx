@@ -5,7 +5,7 @@ const HeroSection = () => {
   useEffect(() => {
     const loadScript = () => {
       const script = document.createElement("script");
-      script.src = "https://link.alphacrm.io/js/form_embed.js";
+      script.src = "https://site.refinedaestheticsmedspa.com/js/form_embed.js";
       script.async = true;
       document.body.appendChild(script);
     };
@@ -66,7 +66,7 @@ const HeroSection = () => {
         <ScrollReveal variant="fade-up" delay={500}>
           <div className="min-h-[600px]">
             <iframe
-              src="https://link.alphacrm.io/widget/form/uH6PlwY1z91nfhmaCfjN"
+              src="https://site.refinedaestheticsmedspa.com/widget/form/uH6PlwY1z91nfhmaCfjN"
               style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
               className="min-h-[700px] md:min-h-[600px]"
               id="inline-uH6PlwY1z91nfhmaCfjN"
